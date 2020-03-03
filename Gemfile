@@ -7,7 +7,7 @@ ruby '2.7.0'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 
 # Use Puma as the app server
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 4.3'
 # Use SCSS for stylesheets
 gem 'fog-aws'
 gem 'sassc', '~> 2.1.0'
