@@ -1,27 +1,35 @@
 <!DOCTYPE html>
-<html>
+
+
+<html lang="en">
+
   <head>
-    <title>RecipeDb</title>
+    <title>Yumzo Recipe Database</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" rel="stylesheet"
+    >
+  </head> <!--closes head-->
 
-  <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <%= link_to "Recipe App", root_path, class: 'navbar-brand' %>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li><%= link_to "About", pages_about_path %>
-    </ul>
-  </div>
-</nav>
+    <nav class="navbar navbar-light">
+            <div class="navbar-header">
+              <%= link_to "Yumzo Recipe App", root_path, class: 'navbar-brand' %>
+            </div>
+               <ul class="nav navbar-nav navbar-right">
+            <li class="about"> <%= link_to "About", pages_about_path %></li>
+      </ul>
+      </nav>
+
+  <header class="container">
+
+
+
 
   <body>
     <%= yield %>
   </body>
+</div> <!--closes container>
 </html>

@@ -2,27 +2,61 @@
 
 img.recipe-show {
 
-width: 400px;
+			width: 400px;
+			height: auto;
 
-height: auto;
+}
+
+body {
+	background-image: linear-gradient(to right, #ff6c69, #fcc3b1);
+}
+
+li.about a{
+	color: white;
+	font-family: 20px;
+	font-family: 'Montserrat',;
+	margin-left: 20px;
+}
+
+a {
+	color: white;
+}
+
+.recipe-box {
+		height: 100%;
+		position: relative;
+		margin-bottom: 20px;
+		border: 1px solid #ff6c69;
+		border-radius: 5px;	
+		background-color: white;
+}
+
+li.sed a{
+	color: black;
+}
+
+
+h1.new {
+	color: white;
+	font-family: 'Montserrat', ;
+	font-weight: bold;
+	font-size: 25px;
+	margin-top:30px;
 
 }
 
 
-.recipe-box {
-
-height: 600px;
-position: relative;
-box-shadow: 10px 10px 5px #888888;
-background: #bdc3c7;
-margin-bottom: 20px;
-
+li.dbtitle {
+	font-family: 'Montserrat',;
+	font-weight: bold;
+	color: #fcc3b1;
+	font-size: 16px;
 }
 
 
 .recipe-index {
 	width: 100%;
-	height: 70%;
+	height: 60%;
 	object-fit:cover;
 }
 
@@ -30,10 +64,129 @@ margin-bottom: 20px;
 	list-style-type: none;
 	position: absolute;
 	bottom: 0;
+	color: black;
 }
 
+.rtitle {
+	font-family:  'Montserrat',;
+	font-weight: bold;
+	color:white;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
 
 
 .recipe-box li:first-child {
 	font-size: 24px;
 }
+
+
+.btn-light {
+	color: white;
+	border-radius: 10px;
+	border: 2px solid #4CAF50;
+	width:50%;
+	background-color:#ff6c69;
+	}
+
+.sform {
+	color: white;
+	font-weight: bold;
+	font-family: 'Montserrat', ;
+	font-size: 16px;
+	margin-top: 30px;
+}
+
+
+
+.navbar-light {
+	background-color: #fa4c48;
+}
+.navbar-light .navbar-brand {
+	color: white;
+	font-weight: bold;
+	font-family: 'Montserrat', ;
+	font-size: 1.8em;
+	margin-top:10px;
+
+}
+
+.input .btn .btn-light {
+	background-color:black;
+}
+
+
+input[type=button], input[type=submit], input[type=reset] {
+  border: none;
+  padding: 16px 32px;
+  margin: 20px 2px;
+  font-family: 'Open Sans', ;
+}
+
+
+.form-control {
+  border: 1px solid #d9dede;
+  border-radius: 5px;
+  width: 100%;
+}
+
+
+label { 
+	color: #fffffa; 
+	display: block; 
+	width: 150px;
+	font-family: 'Open Sans',;
+	font-weight:bold;
+	border-bottom: 1px solid white;
+	width: 90px;
+	padding-bottom: 5px;
+ }
+
+
+.other {
+	color: white;
+}
+
+
+
+p.tagline {
+	color: white;
+	font-family: 'Open Sans',;
+	margin-botton: 40px;
+}
+
+.imagebtn {
+	color: black;
+	border: 1px solid #b5b5b5;
+	border-radius: 5px;
+	background-color: white;
+	width:100%;
+}
+
+input#recipe_image {
+	height:29px;
+}
+
+input[type="file" i] {
+	color: #b5b5b5;
+}
+
+p.ui {
+	font-size: 16px;
+	font-family: 'Open Sans',;
+	color: #fffffa;
+	margin: 2px;
+	font-weight: bold;
+}
+
+
+
+
+h4.subtitle{
+	color: #fffffa;
+	border-bottom: 1px solid white;
+	padding-bottom: 10px;
+	font-size: 16px;
+	font-weight:bold;
+}
+

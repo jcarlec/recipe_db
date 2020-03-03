@@ -11,47 +11,95 @@
     </div>
   <% end %>
 
-<div class="field">
-   <%= form.file_field :image %>
-   <% if @recipe.image? %>
-    <%= image_tag @recipe.image.url, class: "recipe-show" %>
-    <%= form.check_box :remove_image %>
-      Remove Image 
-      <% end %>
+
+
+
+
+<div class="row">
+
+
+<div class="col-3">
+</div> <!---closes row---> 
+
+
+<div class="col-6 yumform">
+      <h1 class="new">New Recipe</h1>
+      <p class="tagline">Welcome to Yumzo! Please, fill in the information to share you recipe.</p>
+            <div class="form-group">
+                <%= form.label :title %>
+                <%= form.text_field :title, class: "form-control" %>
+            </div>
+    
+<!------------------------------------------------->
+
+         <div class="form-group">
+           <%= form.label :description %>
+           <%= form.text_area :description, class: "form-control" %>
+      </div>
+
+         <div class="form-group">
+          <p class="ui">Upload Image</p>
+          
+        <div class="imagebtn">
+           <%= form.file_field :image %>
+           <% if @recipe.image? %>
+           <%= image_tag @recipe.image.url, class: "recipe-show" %>
+           <%= form.check_box :remove_image %>
+            Remove Image 
+            <% end %>
+        </div>
+        </div>
+<!------------------------------------------------>
+    <div class="row">
+      <div class="col-6 different">
+          <h4 class="subtitle">Add Ingredients</h4>
+          <%= form.fields_for :ingredients do |ingredient| %>
+          <%= render 'ingredient_fields', f: ingredient %>
+          <% end %>
+
+
+          <div class="links">
+            <%= link_to_add_association "Add Ingredient+", form, :ingredients, class: "other" %>
+          </div>
+
+
+         
+    </div>
+
+    <div class="col-6 different">
+
+       <h4 class="subtitle">Add Steps</h4>
+          <%= form.fields_for :steps do |step| %>
+          <%= render 'step_fields', f: step %>
+          <% end %>
+
+
+          <div class="links">
+            <%= link_to_add_association "Add Step+", form, :steps, class: "other" %>
+          </div>
+
+
+
+ 
 </div>
+        
+            <%= form.submit class: "btn btn-light"  %>
+        
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
+       <% end %>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
-
-<h3>Add Ingredients</h3>
-<%= form.fields_for :ingredients do |ingredient| %>
-<%= render 'ingredient_fields', f: ingredient %>
-<% end %>
-
-<div class="links">
-  <%= link_to_add_association "add ingredient", form, :ingredients %>
 </div>
-<!--------------->
-<h3>Add Steps</h3>
-<%= form.fields_for :steps do |step| %>
-<%= render 'step_fields', f: step %>
-<% end %>
+</div> <!---closes entire row---->
 
-<div class="links">
-  <%= link_to_add_association "add step", form, :steps %>
+
+  <div class="row">
+    <div class="col-3">
+  <%= link_to 'Back', recipes_path %>
 </div>
-
-
-
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+<div class="col-6">
+  <%= link_to 'Back', recipes_path %>
+</div>
+<div class="col-3">
+  <%= link_to 'Back', recipes_path %>
+</div>
+</div>

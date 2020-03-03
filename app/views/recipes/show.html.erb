@@ -1,17 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <h4 class="sform">Title</h4>
   <%= @recipe.title %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <h4 class="sform">Description</strong>
   <%= @recipe.description %>
 </p>
 
 
-<h3>Ingredients</h3>
+<h4 class="sform">Ingredients</h4>
 <ul>
 	<% for @ingredient in @recipe.ingredients %>
 	<li><%= @ingredient.content %></li>
@@ -19,7 +19,7 @@
 	<% end %>
 </ul>
 
-<h3>Steps</h3>
+<h4 class="sform">Steps</h4>
 <ol>
 	<% for @step in @recipe.steps %>
 	<li><%= @step.direction %></li>
